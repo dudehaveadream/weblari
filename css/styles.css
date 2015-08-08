@@ -60,22 +60,123 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /*Mixins*/
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
+  color: #2b2b2b;
+  background: #3f3f3f;
 }
 
-a {
+a.blue {
   color: #305581;
+  border-bottom: 1px solid #305581;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
-a:focus {
+a.blue:focus, a.blue:hover {
+  color: #305581;
   outline: none;
   text-decoration: none;
+  border-bottom-color: transparent;
 }
 
 button {
   outline: none;
 }
 
+.container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 /* Components */
 /* Layout related stylesheets* */
+header {
+  height: 65px;
+  width: 100%;
+  background: #2b2b2b;
+  position: relative;
+}
+header:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 1px;
+  background: #fea700;
+  background: -moz-linear-gradient(left, #ff6000 0%, #be510f 20%, #fea700 40%, #f59305 60%, #f38405 80%, #ae4613 100%);
+  background: -webkit-linear-gradient(left, #ff6000 0%, #be510f 20%, #fea700 40%, #f59305 60%, #f38405 80%, #ae4613 100%);
+  background: -o-linear-gradient(left, #ff6000 0%, #be510f 20%, #fea700 40%, #f59305 60%, #f38405 80%, #ae4613 100%);
+  background: -ms-linear-gradient(left, #ff6000 0%, #be510f 20%, #fea700 40%, #f59305 60%, #f38405 80%, #ae4613 100%);
+  background: linear-gradient(left, #ff6000 0%, #be510f 20%, #fea700 40%, #f59305 60%, #f38405 80%, #ae4613 100%);
+  opacity: .72;
+}
+header .logo {
+  padding-top: 12px;
+}
+header .search-holder {
+  float: right;
+  padding-top: 14px;
+}
+header .search-holder ::-webkit-input-placeholder {
+  color: #ffffff;
+}
+header .search-holder ::-moz-placeholder {
+  color: #ffffff;
+}
+header .search-holder :-moz-placeholder {
+  color: #ffffff;
+}
+header .search-holder :-ms-input-placeholder {
+  color: #ffffff;
+}
+header .search-holder input[type="text"] {
+  padding: 0 10px;
+  height: 36px;
+  line-height: 20px;
+  width: 220px;
+  font-size: 14px;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  background: #626262;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 767px) {
+  header .search-holder {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+header .nav {
+  float: right;
+}
+header .nav .nav-divider {
+  background: none;
+}
+header .nav > li {
+  float: left;
+}
+header .nav > li > a {
+  padding: 24px 15px;
+  font-size: 15px;
+  color: #ffffff;
+}
+header .nav > li > a:hover, header .nav > li > a:focus {
+  background: none !important;
+}
+header .nav .open > a {
+  background: none;
+}
+header .nav .open > a:hover, header .nav .open > a:focus {
+  background: none;
+}
+
 /* Pages */

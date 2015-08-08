@@ -2,18 +2,28 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: $regular;
+    color: $gray;
+    background: #3f3f3f;
 }
 
-a {
-    color: #305581;
-    &:focus {
+a.blue {
+    color: $blue;
+    border-bottom: 1px solid $blue;
+    @include transition (all, 0.2s, linear);
+    &:focus, &:hover {
+        color: $blue;
         outline: none;
         text-decoration: none;
+        border-bottom-color: transparent;
     }
 }
 button {
 	outline: none;
 }
 
+.container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+}
