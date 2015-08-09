@@ -1,0 +1,72 @@
+.subheader {
+	padding: 40px 0 25px;
+	p {
+		color: $white;
+		font-size: 17px;
+		line-height: 1.2;
+		img {
+			margin-right: 8px;
+			margin-bottom: -2px;
+		}
+	}
+	&-inner {
+		padding: 15px;
+		background: $gray;
+		@include border-radius (8px);
+	}
+	&-title {
+		text-align: center;
+	}
+	&-social {
+		padding: 12px 0 11px;
+		text-align: center;
+		cursor: default;
+		display: -webkit-box;
+	    display: -webkit-flex;
+	    display: -ms-flexbox;
+	    display: flex;
+	    .social-holder {
+			-webkit-box-flex: 1;
+		    -webkit-flex-grow: 1;
+		    -ms-flex-positive: 1;
+		    flex-grow: 1;
+		    text-align: center;
+	    }
+		.social-icon {
+			display: inline-block;
+			width: 26px;
+			height: 25px;
+			background: url(../img/icons/social-v1.png);
+			&.ytb {
+				background-position: 0 0;
+				&:hover {
+					background-position: -26px 0;
+				}
+			}
+			&.tw {
+				background-position: 0 -30px;
+				&:hover {
+					background-position: -26px -30px;
+				}
+			}
+			&.fb {
+				background-position: 0 -60px;
+				&:hover {
+					background-position: -26px -60px;
+				}
+			}
+			&.gplus {
+				background-position: 0 -90px;
+				&:hover {
+					background-position: -26px -90px;
+				}
+			}
+			&.pst {
+				background-position: 0 -120px;
+				&:hover {
+					background-position: -26px -120px;
+				}
+			}
+		}
+	}
+}

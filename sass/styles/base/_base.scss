@@ -23,7 +23,11 @@ button {
 	outline: none;
 }
 
-.container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
-    margin-right: 0;
-    margin-left: 0;
+.container-fluid {
+    max-width: 1600px;
 }
+.content {
+    max-width: 1630px;
+    margin: auto;
+}
+
