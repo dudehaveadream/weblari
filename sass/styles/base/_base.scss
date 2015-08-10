@@ -6,6 +6,9 @@ body {
     font-weight: $regular;
     color: $gray;
     background: #3f3f3f;
+    @media #{$mobile} {
+        background: #363737;
+    }
 }
 
 a.blue {
@@ -27,7 +30,7 @@ button {
     max-width: 1600px;
 }
 .content {
-    max-width: 1630px;
+    max-width: 1600px;
     margin: auto;
 }
 

@@ -23,6 +23,8 @@ header {
     }
     .logo {
         padding-top: 12px;
+        position: relative;
+        z-index: 80;
         @media #{$mobile} {
             position: absolute;
             top: 10px;
@@ -32,8 +34,9 @@ header {
     }
     .search-holder {
         float: right;
-        padding-top: 14px;
         margin-left: 10px;
+        z-index: 70;
+        position: relative;
         ::-webkit-input-placeholder {
           color: $white;
         }
@@ -43,7 +46,7 @@ header {
         :-moz-placeholder {
           color: $white;
         }
-        :-ms-input-placeholder      {
+        :-ms-input-placeholder {
           color: $white;
         }
         input[type="text"] {
@@ -58,11 +61,57 @@ header {
             background: #626262;
             @include border-radius (8px);
         }
+        .search-inner {
+            padding-top: 14px;
+        }
+        .search-result {
+            border-top: 1px solid #6b6b6b;
+            li {
+                border-bottom: 1px solid #6b6b6b;
+                a {
+                    display: block;
+                    font-size: 35px;
+                    padding: 25px 20px 24px;
+                    line-height: 1;
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+        }
         @media #{$mobile} {
+            width: 100%;
             position: absolute;
-            right: 15px;
-            top: 0;
-            display: none;
+            left: 0;
+            top: 80px;
+            margin: 0;
+            .search-btn {
+                position: absolute;
+                right: 15px;
+                top: -60px;
+            }
+            .search-inner {
+                display: none;
+                background: #3f3f3f;
+                padding-bottom: 30px;
+                h5 {
+                    text-align: center;
+                    font-size: 28px;
+                    font-weight: $bold;
+                    color: $white;
+                    margin-bottom: 15px;
+                }
+                .input-holder {
+                    padding: 0 15px 20px;
+                    input[type="text"] {
+                        width: 100%;
+                        height: 85px;
+                        font-size: 37px;
+                        background: $gray;
+                        line-height: 50px;
+                        padding: 0 25px;
+                    }
+                }
+            }
         }
     }
     .nav {
@@ -82,6 +131,7 @@ header {
                 }
             }
             .dropdown-menu {
+                padding: 10px 0;
                 background: $gray;
                 border: none;
                 margin-top: 1px;
@@ -178,10 +228,13 @@ header {
         height: 80px;
     }
 }
-.container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
+.container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
 
     z-index: 50;
     position: relative;
+}
+.container-fluid > .navbar-header {
+    z-index: 80;
 }
 .container-fluid > .navbar-collapse {
     @media #{$mobile} {
@@ -196,7 +249,7 @@ header {
     float: left;
     border: none;
     margin-top: 15px;
-    margin-left: 15px;
+    margin-left: 10px;
     background: #3f3f3f;
     @include border-radius (0);
     .icon-bar {

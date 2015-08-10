@@ -17,55 +17,91 @@
 	&-title {
 		text-align: center;
 	}
-	&-social {
-		padding: 12px 0 11px;
-		text-align: center;
-		cursor: default;
-		display: -webkit-box;
-	    display: -webkit-flex;
-	    display: -ms-flexbox;
-	    display: flex;
-	    .social-holder {
-			-webkit-box-flex: 1;
-		    -webkit-flex-grow: 1;
-		    -ms-flex-positive: 1;
-		    flex-grow: 1;
-		    text-align: center;
-	    }
-		.social-icon {
-			display: inline-block;
-			width: 26px;
-			height: 25px;
-			background: url(../img/icons/social-v1.png);
-			&.ytb {
-				background-position: 0 0;
-				&:hover {
-					background-position: -26px 0;
-				}
+}
+
+.social-v1 {
+	padding: 12px 0 11px;
+	text-align: center;
+	cursor: default;
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    .social-holder {
+		-webkit-box-flex: 1;
+	    -webkit-flex-grow: 1;
+	    -ms-flex-positive: 1;
+	    flex-grow: 1;
+	    text-align: center;
+    }
+	.social-icon {
+		display: inline-block;
+		width: 26px;
+		height: 25px;
+		background: url(../img/icons/social-v1.png);
+		&.ytb {
+			background-position: 0 0;
+			&:hover {
+				background-position: -26px 0;
 			}
-			&.tw {
-				background-position: 0 -30px;
-				&:hover {
-					background-position: -26px -30px;
-				}
+		}
+		&.tw {
+			background-position: 0 -30px;
+			&:hover {
+				background-position: -26px -30px;
 			}
-			&.fb {
-				background-position: 0 -60px;
-				&:hover {
-					background-position: -26px -60px;
-				}
+		}
+		&.fb {
+			background-position: 0 -60px;
+			&:hover {
+				background-position: -26px -60px;
 			}
-			&.gplus {
-				background-position: 0 -90px;
-				&:hover {
-					background-position: -26px -90px;
-				}
+		}
+		&.gplus {
+			background-position: 0 -90px;
+			&:hover {
+				background-position: -26px -90px;
 			}
-			&.pst {
-				background-position: 0 -120px;
-				&:hover {
-					background-position: -26px -120px;
-				}
+		}
+		&.pst {
+			background-position: 0 -120px;
+			&:hover {
+				background-position: -26px -120px;
+			}
+		}
+	}
+}
+
+.social-v2 {
+	text-align: center;
+	cursor: default;
+	.social-icon {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		background: url(../img/icons/social-v2.png);
+		&.pst {
+			background-position: 0 0;
+			&:hover {
+				background-position: 0 -20px;
+			}
+		}
+		&.gplus {
+			background-position: -20px 0;
+			&:hover {
+				background-position: -20px -20px;
+			}
+		}
+		&.tw {
+			background-position: -40px 0;
+			&:hover {
+				background-position: -40px -20px;
+			}
+		}
+		&.fb {
+			background-position: -60px 0;
+			&:hover {
+				background-position: -60px -20px;
 			}
 		}
 	}
