@@ -1,108 +1,192 @@
 .subheader {
 	padding: 40px 0 25px;
-	p {
-		color: $white;
-		font-size: 17px;
-		line-height: 1.2;
-		img {
-			margin-right: 8px;
-			margin-bottom: -2px;
-		}
-	}
 	&-inner {
 		padding: 15px;
 		background: $gray;
 		@include border-radius (8px);
+		p {
+			color: $white;
+			font-size: 17px;
+			line-height: 1.2;
+			img {
+				margin-right: 8px;
+				margin-bottom: -2px;
+			}
+		}
 	}
 	&-title {
 		text-align: center;
 	}
 }
 
-.social-v1 {
-	padding: 12px 0 11px;
-	text-align: center;
-	cursor: default;
-	display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    .social-holder {
-		-webkit-box-flex: 1;
-	    -webkit-flex-grow: 1;
-	    -ms-flex-positive: 1;
-	    flex-grow: 1;
-	    text-align: center;
-    }
-	.social-icon {
-		display: inline-block;
-		width: 26px;
-		height: 25px;
-		background: url(../img/icons/social-v1.png);
-		&.ytb {
-			background-position: 0 0;
-			&:hover {
-				background-position: -26px 0;
+.subheader-info {
+	margin: 10px 0;
+	background: $white;
+	padding: 25px 240px 25px 25px;
+	position: relative;
+	@include border-radius (10px);
+	.social-v1 {
+		width: 190px;
+		position: absolute;
+		top: 25px;
+		right: 25px;
+		padding: 0;
+	}
+	.arrow-holder {
+		position: absolute;
+		top: 35px;
+		right: 25px;
+		a {
+			img {
+				margin-left: 8px;
+				margin-top: -1px;
 			}
 		}
-		&.tw {
-			background-position: 0 -30px;
-			&:hover {
-				background-position: -26px -30px;
+	}
+	.popular-requests {
+		position: absolute;
+		bottom: 25px;
+		right: 25px;
+		width: 350px;
+		text-align: right;
+		h3 {
+			font-size: 17px;
+			color: #ff6000;
+			margin-right: 2px;
+		}
+		a {
+			display: inline-block;
+			font-size: 14px;
+			color: #3f3f3f;
+			text-decoration: none;
+			background: #e6e6e6;
+			margin: 10px 2px 0;
+			padding: 5px 10px;
+			@include border-radius (5px);
+		}
+	}
+	p {
+		font-size: 15px;
+		line-height: 1.2;
+	}
+	a {
+		font-size: 15px;
+		color: #1d426f;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+		img {
+			vertical-align: middle;
+		}
+	}
+	&-nav {
+		margin-top: 20px;
+		.section {
+			margin-right: 25px;
+			display: inline-block;
+			a {
+				img {
+					margin-top: -3px;
+					margin-right: 5px;
+				}
 			}
 		}
-		&.fb {
-			background-position: 0 -60px;
-			&:hover {
-				background-position: -26px -60px;
+	}
+	&-inner {
+		margin-top: 20px;
+		padding-right: 240px;
+		position: relative;
+		.date {
+			position: absolute;
+			right: -215px;
+			top: -40px;
+			font-size: 15px;
+		}
+		p {
+			img {
+				vertical-align: middle;
+				margin-right: 5px;
+			}
+			&.coupon-info {
+				max-width: 580px;
 			}
 		}
-		&.gplus {
-			background-position: 0 -90px;
-			&:hover {
-				background-position: -26px -90px;
+	}
+	.subheader-links {
+		margin-top: 20px;
+		a {
+			margin-right: 20px;
+			line-height: 1.2;
+		}
+	}
+	&.subheader-collapse {
+		.social-v1 {
+			top: auto;
+			bottom: 25px;
+			z-index: 5;
+		}
+		.subheader-info-inner {
+			display: none;
+		}
+		&.collapsed {
+			padding-right: 25px;
+			.date {
+				right: 0;
+			}
+			.subheader-info-inner {
+				padding-right: 450px;
 			}
 		}
-		&.pst {
-			background-position: 0 -120px;
-			&:hover {
-				background-position: -26px -120px;
+	}
+	@media #{$desktop} {
+		&-inner {
+			padding-right: 150px;
+		}
+	}
+	@media #{$tablet} {
+		&-inner {
+			padding-right: 0;
+		}
+		.popular-requests {
+			width: 240px;
+		}
+		&.subheader-collapse {
+			&.collapsed {
+				.subheader-info-inner {
+					padding-right: 215px;
+				}
+			}
+		}
+	}
+	@media #{$mobile} {
+		padding-right: 25px;
+		.arrow-holder {
+			display: none;
+		}
+		&-nav {
+			.section {
+				margin-top: 5px;
+			}
+		}
+		&-inner {
+			.date {
+				display: none;
+			}
+		}
+		.popular-requests {
+			display: none;
+		}
+		&.subheader-collapse {
+			.subheader-info-inner {
+				display: block;
+			}
+			&.collapsed {
+				.subheader-info-inner {
+					padding-right: 0;
+				}
 			}
 		}
 	}
 }
 
-.social-v2 {
-	text-align: center;
-	cursor: default;
-	.social-icon {
-		display: inline-block;
-		width: 20px;
-		height: 20px;
-		background: url(../img/icons/social-v2.png);
-		&.pst {
-			background-position: 0 0;
-			&:hover {
-				background-position: 0 -20px;
-			}
-		}
-		&.gplus {
-			background-position: -20px 0;
-			&:hover {
-				background-position: -20px -20px;
-			}
-		}
-		&.tw {
-			background-position: -40px 0;
-			&:hover {
-				background-position: -40px -20px;
-			}
-		}
-		&.fb {
-			background-position: -60px 0;
-			&:hover {
-				background-position: -60px -20px;
-			}
-		}
-	}
-}

@@ -22,6 +22,7 @@ a.blue {
         border-bottom-color: transparent;
     }
 }
+
 button {
 	outline: none;
 }
@@ -34,3 +35,11 @@ button {
     margin: auto;
 }
 
+h1 {
+    font-size: 36px;
+    color: $gray;
+}
+p {
+    font-size: 17px;
+    color: $gray;
+}
