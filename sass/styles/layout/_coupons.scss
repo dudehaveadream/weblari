@@ -22,6 +22,7 @@
 					display: table-cell;
 					vertical-align: middle;
 					font-size: 13px;
+					text-align: center;
 				}
 				.likes-holder {
 					.like-up {
@@ -53,6 +54,94 @@
 					}
 				}
 			}
+		}
+		@media #{$mobile} {
+			h5 {
+				padding-right: 0;
+				margin-bottom: 10px;
+			}
+			&-inner {
+				.coupon-info {
+					width: 100%;
+					float: none;
+				}
+				.coupon-single {
+					float: none;
+					width: 100%;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
+
+.coupon-modal {
+	.modal-dialog {
+		width: 510px;
+		margin: 10% auto 0;
+	}
+	.modal-content {
+		box-shadow: none;
+		@include border-radius (15px);
+	}
+	.modal-body {
+		padding: 25px 40px;
+		text-align: center;
+		h1 {
+			margin-bottom: 20px;
+		}
+		.coupon-website {
+			font-size: 17px;
+			margin-bottom: 20px;
+			a {
+				color: #305581;
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		.coupon-code {
+			background: #e6e6e6;
+			padding: 10px;
+			@include clearfix;
+			@include border-radius (5px);
+			span {
+				text-transform: uppercase;
+				color: #c12900;
+				font-size: 38px;
+				font-weight: $semibold;
+				display: inline-block;
+				padding: 1px 0 5px;
+			}
+			button {
+				height: 44px;
+				float: right;
+			}
+		}
+		.coupon-info {
+			margin-top: 20px;
+			.likes-holder, .rating {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.rating {
+				font-size: 13px;
+				margin-left: 15px;
+			}
+		}
+	}
+	.close {
+		font-size: 45px;
+		opacity: 1;
+		color: #3f3f3f;
+		position: absolute;
+		top: 0;
+		right: 10px;
+	}
+	@media #{$mobile} {
+		.modal-dialog {
+			width: 100%;
 		}
 	}
 }

@@ -110,6 +110,39 @@ p {
   color: #2b2b2b;
 }
 
+.btn-orange {
+  font-size: 17px;
+  color: #ffffff;
+  border: none;
+  outline: none !important;
+  background: #fb6d02;
+  background: -moz-linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+  background: -webkit-linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+  background: -o-linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+  background: -ms-linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+  background: linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+}
+.btn-orange:hover {
+  color: #ffffff;
+  background: #fb6d02;
+  background: -moz-linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+  background: -webkit-linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+  background: -o-linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+  background: -ms-linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+  background: linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+}
+.btn-orange:active {
+  background: #fb6d02;
+  background: -moz-linear-gradient(bottom, #f18d07 0%, #f38706 20%, #f77904 40%, #fb6d02 60%, #fc6901 80%, #ff6100 100%);
+  background: -webkit-linear-gradient(bottom, #f18d07 0%, #f38706 20%, #f77904 40%, #fb6d02 60%, #fc6901 80%, #ff6100 100%);
+  background: -o-linear-gradient(bottom, #f18d07 0%, #f38706 20%, #f77904 40%, #fb6d02 60%, #fc6901 80%, #ff6100 100%);
+  background: -ms-linear-gradient(bottom, #f18d07 0%, #f38706 20%, #f77904 40%, #fb6d02 60%, #fc6901 80%, #ff6100 100%);
+  background: linear-gradient(bottom, #f18d07 0%, #f38706 20%, #f77904 40%, #fb6d02 60%, #fc6901 80%, #ff6100 100%);
+}
+.btn-orange:focus {
+  color: #ffffff;
+}
+
 .like-link {
   position: relative;
   margin-left: 25px;
@@ -742,6 +775,9 @@ header .nav .open > a:hover, header .nav .open > a:focus {
     width: 100%;
   }
 }
+.grid li.column-3 {
+  width: 100%;
+}
 .grid-inner {
   background: #ffffff;
 }
@@ -861,6 +897,7 @@ header .nav .open > a:hover, header .nav .open > a:focus {
   display: table-cell;
   vertical-align: middle;
   font-size: 13px;
+  text-align: center;
 }
 .coupons-holder .coupon-item-inner .coupon-info .likes-holder .like-up {
   margin-right: 4px;
@@ -895,4 +932,98 @@ header .nav .open > a:hover, header .nav .open > a:focus {
 .coupons-holder .coupon-item-inner .coupon-single.coupon-visible button {
   color: #c12900;
   font-weight: 600;
+}
+@media only screen and (max-width: 767px) {
+  .coupons-holder .coupon-item h5 {
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+  .coupons-holder .coupon-item-inner .coupon-info {
+    width: 100%;
+    float: none;
+  }
+  .coupons-holder .coupon-item-inner .coupon-single {
+    float: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.coupon-modal .modal-dialog {
+  width: 510px;
+  margin: 10% auto 0;
+}
+.coupon-modal .modal-content {
+  box-shadow: none;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px;
+}
+.coupon-modal .modal-body {
+  padding: 25px 40px;
+  text-align: center;
+}
+.coupon-modal .modal-body h1 {
+  margin-bottom: 20px;
+}
+.coupon-modal .modal-body .coupon-website {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+.coupon-modal .modal-body .coupon-website a {
+  color: #305581;
+  text-decoration: underline;
+}
+.coupon-modal .modal-body .coupon-website a:hover {
+  text-decoration: none;
+}
+.coupon-modal .modal-body .coupon-code {
+  background: #e6e6e6;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+.coupon-modal .modal-body .coupon-code:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.coupon-modal .modal-body .coupon-code span {
+  text-transform: uppercase;
+  color: #c12900;
+  font-size: 38px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 1px 0 5px;
+}
+.coupon-modal .modal-body .coupon-code button {
+  height: 44px;
+  float: right;
+}
+.coupon-modal .modal-body .coupon-info {
+  margin-top: 20px;
+}
+.coupon-modal .modal-body .coupon-info .likes-holder, .coupon-modal .modal-body .coupon-info .rating {
+  display: inline-block;
+  vertical-align: middle;
+}
+.coupon-modal .modal-body .coupon-info .rating {
+  font-size: 13px;
+  margin-left: 15px;
+}
+.coupon-modal .close {
+  font-size: 45px;
+  opacity: 1;
+  color: #3f3f3f;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+@media only screen and (max-width: 767px) {
+  .coupon-modal .modal-dialog {
+    width: 100%;
+  }
 }

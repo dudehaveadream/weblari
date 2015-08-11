@@ -21,6 +21,9 @@
 		@media #{$mobile} {
 			width: 100%;
 		}
+		&.column-3 {
+			width: 100%;
+		}
 	}
 	&-inner {
 		background: $white;

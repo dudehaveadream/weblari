@@ -43,3 +43,36 @@ p {
     font-size: 17px;
     color: $gray;
 }
+
+.btn-orange {
+    font-size: 17px;
+    color: $white;
+    border: none;
+    outline: none !important;
+    background: #fb6d02;
+    background: -moz-linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+    background: -webkit-linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+    background: -o-linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+    background: -ms-linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+    background: linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+    &:hover {
+        color: $white;
+        background: #fb6d02;
+        background: -moz-linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+        background: -webkit-linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+        background: -o-linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+        background: -ms-linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+        background: linear-gradient(bottom, #ff6100 0%, #fc6901 20%, #fb6d02 40%, #f77904 60%, #f38706 80%, #f18d07 100%);
+    }
+    &:active {
+        background: #fb6d02;
+        background: -moz-linear-gradient(bottom, #f18d07 0%, #f38706 20%, #f77904 40%, #fb6d02 60%, #fc6901 80%, #ff6100 100%);
+        background: -webkit-linear-gradient(bottom, #f18d07 0%, #f38706 20%, #f77904 40%, #fb6d02 60%, #fc6901 80%, #ff6100 100%);
+        background: -o-linear-gradient(bottom, #f18d07 0%, #f38706 20%, #f77904 40%, #fb6d02 60%, #fc6901 80%, #ff6100 100%);
+        background: -ms-linear-gradient(bottom, #f18d07 0%, #f38706 20%, #f77904 40%, #fb6d02 60%, #fc6901 80%, #ff6100 100%);
+        background: linear-gradient(bottom, #f18d07 0%, #f38706 20%, #f77904 40%, #fb6d02 60%, #fc6901 80%, #ff6100 100%); 
+    }
+    &:focus {
+        color: $white;
+    }
+}
