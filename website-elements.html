@@ -160,10 +160,6 @@
                             <div class="section">
                                 <a href="#" class="like-link">I like this</a>
                             </div>
-                            <div class="section">
-                                <a href="#" class="like-btn like-up"></a>
-                                <a href="#" class="like-btn like-down"></a>
-                            </div>
                         </div>
                         <div class="subheader-info-inner">
                             <div class="date">Received: Friday June 21, 2015</div>
@@ -276,6 +272,29 @@
         </ul>
     </div><!-- Content: end -->
 
+    <div class="carousel">
+        <!-- Carousel Pager -->
+        <ul id="mailsCarouselPager">
+          <li><a href="#"><img src="img/mails/2.jpg" alt=""></a></li>
+          <li><a href="#"><img src="img/mails/3.jpg" alt=""></a></li>
+          <li><a href="#"><img src="img/mails/7.jpg" alt=""></a></li>
+          <li><a href="#"><img src="img/mails/5.jpg" alt=""></a></li>
+          <li><a href="#"><img src="img/mails/6.jpg" alt=""></a></li>
+          <li><a href="#"><img src="img/mails/2.jpg" alt=""></a></li>
+          <li><a href="#"><img src="img/mails/3.jpg" alt=""></a></li>
+        </ul>
+        <!-- Carousel -->
+        <ul class="rslides" id="mailsCarousel">
+          <li><img src="img/mails/2.jpg" alt=""></li>
+          <li><img src="img/mails/3.jpg" alt=""></li>
+          <li><img src="img/mails/7.jpg" alt=""></li>
+          <li><img src="img/mails/5.jpg" alt=""></li>
+          <li><img src="img/mails/6.jpg" alt=""></li>
+          <li><img src="img/mails/2.jpg" alt=""></li>
+          <li><img src="img/mails/3.jpg" alt=""></li>
+        </ul>
+    </div><!-- Carousel: end -->
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -286,6 +305,7 @@
     <script src="js/imagesloaded.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/animonscroll.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
     <script src="js/custom.js"></script>
     <script>
         new AnimOnScroll( document.getElementById( 'grid' ), {
@@ -293,6 +313,13 @@
             maxDuration : 0.7,
             viewportFactor : 0.2
         } );
+
+        $("#mailsCarousel").responsiveSlides({
+            nav: true,
+            manualControls: '#mailsCarouselPager',
+            maxwidth: 750
+        });
+
     </script>
 
   </body>
