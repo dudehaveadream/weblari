@@ -3,9 +3,6 @@ header {
     width: 100%;
     background: $gray;
     position: relative;
-    @media #{$mobile} {
-        height: 80px;
-    }
     &:before {
         content: '';
         position: absolute;
@@ -21,16 +18,36 @@ header {
         background: linear-gradient(left, #ff6000 0%, #be510f 20%, #fea700 40%, #f59305 60%, #f38405 80%, #ae4613 100%);
         opacity: .72;
     }
+    @media #{$mobile} {
+        height: 60px;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        &:before {
+            z-index: 100;
+            opacity: 1;
+        }
+    }
     .logo {
         padding-top: 12px;
         position: relative;
         z-index: 80;
         @media #{$mobile} {
             position: absolute;
-            top: 10px;
+            top: 2px;
             left: 50%;
-            margin-left: -75px;
+            margin-left: -65px;
+            img {
+                width: 130px;
+            }
         }
+    }
+    .search-btn {
+        position: absolute;
+        right: 20px;
+        top: 15px;
     }
     .search-holder {
         float: right;
@@ -70,8 +87,8 @@ header {
                 border-bottom: 1px solid #6b6b6b;
                 a {
                     display: block;
-                    font-size: 35px;
-                    padding: 25px 20px 24px;
+                    font-size: 25px;
+                    padding: 15px;
                     line-height: 1;
                     color: $white;
                     text-decoration: none;
@@ -80,22 +97,26 @@ header {
         }
         @media #{$mobile} {
             width: 100%;
-            position: absolute;
+            height: calc(100% - 60px);
+            position: fixed;
             left: 0;
-            top: 80px;
+            top: 60px;
             margin: 0;
-            .search-btn {
-                position: absolute;
-                right: 15px;
-                top: -60px;
-            }
+            display: none;
+
             .search-inner {
-                display: none;
+                padding-top: 0;
                 background: #3f3f3f;
-                padding-bottom: 30px;
+                height: 100%;
+                &-content {
+                    padding-top: 14px;
+                    height: 100%;
+                    overflow-y: scroll;
+                    padding-bottom: 30px;
+                }
                 h5 {
                     text-align: center;
-                    font-size: 28px;
+                    font-size: 22px;
                     font-weight: $bold;
                     color: $white;
                     margin-bottom: 15px;
@@ -104,10 +125,10 @@ header {
                     padding: 0 15px 20px;
                     input[type="text"] {
                         width: 100%;
-                        height: 85px;
-                        font-size: 37px;
+                        height: 55px;
+                        font-size: 27px;
                         background: $gray;
-                        line-height: 50px;
+                        line-height: 40px;
                         padding: 0 25px;
                     }
                 }
@@ -166,7 +187,8 @@ header {
                 float: none;
                 border-bottom: 1px solid #6b6b6b;
                 > a {
-                    font-size: 35px;
+                    font-size: 25px;
+                    padding: 15px;
                 }
                 .dropdown-menu {
                     padding: 0;
@@ -177,9 +199,10 @@ header {
                         border-top: 1px solid #6b6b6b;
                         padding: 0;
                         a {
-                            font-size: 35px;
-                            padding: 25px 20px 24px;
+                            font-size: 25px;
+                            padding: 15px;
                             line-height: 1;
+                            white-space: normal;
                         }
                     }
                     &.dropdown-large {
@@ -212,20 +235,22 @@ header {
             @media #{$mobile} {
                 > a {
                     text-align: center;
-                    font-size: 28px;
+                    font-size: 22px;
                     font-weight: $bold;
                 }
             }
         }
         @media #{$mobile} {
             float: none;
+            overflow-y: scroll;
+            height: 100%;
         }
     }
 }
 
 .navbar-header {
     @media #{$mobile} {
-        height: 80px;
+        height: 60px;
     }
 }
 .container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
@@ -241,6 +266,11 @@ header {
         background: #3f3f3f;
         padding-left: 0;
         padding-right: 0;
+        position: fixed;
+        z-index: 10000;
+        width: 100%;
+        height: calc(100% - 60px);
+        border-top: none;
     }
 }
 
@@ -248,12 +278,13 @@ header {
 .navbar-toggle {
     float: left;
     border: none;
-    margin-top: 15px;
+    margin: 0;
+    margin-top: 6px;
     margin-left: 10px;
     background: #3f3f3f;
     @include border-radius (0);
     .icon-bar {
-        width: 40px;
+        width: 35px;
         height: 4px;
         background: $white;
         @include border-radius (30px);

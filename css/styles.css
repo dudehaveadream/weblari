@@ -68,6 +68,7 @@ body {
 }
 @media only screen and (max-width: 767px) {
   body {
+    padding-top: 60px;
     padding-bottom: 0;
     background: #363737;
   }
@@ -388,11 +389,6 @@ header {
   background: #2b2b2b;
   position: relative;
 }
-@media only screen and (max-width: 767px) {
-  header {
-    height: 80px;
-  }
-}
 header:before {
   content: '';
   position: absolute;
@@ -408,6 +404,20 @@ header:before {
   background: linear-gradient(left, #ff6000 0%, #be510f 20%, #fea700 40%, #f59305 60%, #f38405 80%, #ae4613 100%);
   opacity: .72;
 }
+@media only screen and (max-width: 767px) {
+  header {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+  }
+  header:before {
+    z-index: 100;
+    opacity: 1;
+  }
+}
 header .logo {
   padding-top: 12px;
   position: relative;
@@ -416,10 +426,18 @@ header .logo {
 @media only screen and (max-width: 767px) {
   header .logo {
     position: absolute;
-    top: 10px;
+    top: 2px;
     left: 50%;
-    margin-left: -75px;
+    margin-left: -65px;
   }
+  header .logo img {
+    width: 130px;
+  }
+}
+header .search-btn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
 }
 header .search-holder {
   float: right;
@@ -465,8 +483,8 @@ header .search-holder .search-result li {
 }
 header .search-holder .search-result li a {
   display: block;
-  font-size: 35px;
-  padding: 25px 20px 24px;
+  font-size: 25px;
+  padding: 15px;
   line-height: 1;
   color: #ffffff;
   text-decoration: none;
@@ -474,24 +492,27 @@ header .search-holder .search-result li a {
 @media only screen and (max-width: 767px) {
   header .search-holder {
     width: 100%;
-    position: absolute;
+    height: calc(100% - 60px);
+    position: fixed;
     left: 0;
-    top: 80px;
+    top: 60px;
     margin: 0;
-  }
-  header .search-holder .search-btn {
-    position: absolute;
-    right: 15px;
-    top: -60px;
+    display: none;
   }
   header .search-holder .search-inner {
-    display: none;
+    padding-top: 0;
     background: #3f3f3f;
+    height: 100%;
+  }
+  header .search-holder .search-inner-content {
+    padding-top: 14px;
+    height: 100%;
+    overflow-y: scroll;
     padding-bottom: 30px;
   }
   header .search-holder .search-inner h5 {
     text-align: center;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 15px;
@@ -501,10 +522,10 @@ header .search-holder .search-result li a {
   }
   header .search-holder .search-inner .input-holder input[type="text"] {
     width: 100%;
-    height: 85px;
-    font-size: 37px;
+    height: 55px;
+    font-size: 27px;
     background: #2b2b2b;
-    line-height: 50px;
+    line-height: 40px;
     padding: 0 25px;
   }
 }
@@ -567,7 +588,8 @@ header .nav > li .dropdown-menu.dropdown-large > li > a {
     border-bottom: 1px solid #6b6b6b;
   }
   header .nav > li > a {
-    font-size: 35px;
+    font-size: 25px;
+    padding: 15px;
   }
   header .nav > li .dropdown-menu {
     padding: 0;
@@ -580,9 +602,10 @@ header .nav > li .dropdown-menu.dropdown-large > li > a {
     padding: 0;
   }
   header .nav > li .dropdown-menu > li a {
-    font-size: 35px;
-    padding: 25px 20px 24px;
+    font-size: 25px;
+    padding: 15px;
     line-height: 1;
+    white-space: normal;
   }
   header .nav > li .dropdown-menu.dropdown-large {
     width: 100%;
@@ -611,19 +634,21 @@ header .nav .open > a:hover, header .nav .open > a:focus {
 @media only screen and (max-width: 767px) {
   header .nav .open > a {
     text-align: center;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 700;
   }
 }
 @media only screen and (max-width: 767px) {
   header .nav {
     float: none;
+    overflow-y: scroll;
+    height: 100%;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .navbar-header {
-    height: 80px;
+    height: 60px;
   }
 }
 
@@ -641,13 +666,19 @@ header .nav .open > a:hover, header .nav .open > a:focus {
     background: #3f3f3f;
     padding-left: 0;
     padding-right: 0;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    height: calc(100% - 60px);
+    border-top: none;
   }
 }
 
 .navbar-toggle {
   float: left;
   border: none;
-  margin-top: 15px;
+  margin: 0;
+  margin-top: 6px;
   margin-left: 10px;
   background: #3f3f3f;
   -webkit-border-radius: 0;
@@ -656,7 +687,7 @@ header .nav .open > a:hover, header .nav .open > a:focus {
   border-radius: 0;
 }
 .navbar-toggle .icon-bar {
-  width: 40px;
+  width: 35px;
   height: 4px;
   background: #ffffff;
   -webkit-border-radius: 30px;
@@ -693,6 +724,9 @@ header .nav .open > a:hover, header .nav .open > a:focus {
 .subheader-inner p img {
   margin-right: 8px;
   margin-bottom: -2px;
+}
+.subheader-inner.social-v1 {
+  padding: 12px 0 11px;
 }
 .subheader-title {
   text-align: center;

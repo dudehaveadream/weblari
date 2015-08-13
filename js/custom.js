@@ -2,7 +2,7 @@
 
 // Search func
 $('#toggleSearch').click(function(){
-	$('.search-holder .search-inner').slideToggle();
+	$('.search-holder').slideToggle();
 });
 
 // Subheader collapse func
@@ -25,3 +25,13 @@ $('a[href^="#go"]').click(function(){
     }, 500);
     return false;
 });
+
+if($(window).width() < 767)
+{
+	$('a[href^="#go"]').click(function(){
+	    $('html, body').animate({
+	        scrollTop: $( $(this).attr('href') ).offset().top - 80
+	    }, 500);
+	    return false;
+	});
+}
