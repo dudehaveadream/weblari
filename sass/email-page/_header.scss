@@ -1,0 +1,301 @@
+.email-page-header {
+    height: 65px;
+    width: 100%;
+    background: $gray;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: 1px;
+        background: #fea700;
+        background: -moz-linear-gradient(left, #ff6000 0%, #be510f 20%, #fea700 40%, #f59305 60%, #f38405 80%, #ae4613 100%);
+        background: -webkit-linear-gradient(left, #ff6000 0%, #be510f 20%, #fea700 40%, #f59305 60%, #f38405 80%, #ae4613 100%);
+        background: -o-linear-gradient(left, #ff6000 0%, #be510f 20%, #fea700 40%, #f59305 60%, #f38405 80%, #ae4613 100%);
+        background: -ms-linear-gradient(left, #ff6000 0%, #be510f 20%, #fea700 40%, #f59305 60%, #f38405 80%, #ae4613 100%);
+        background: linear-gradient(left, #ff6000 0%, #be510f 20%, #fea700 40%, #f59305 60%, #f38405 80%, #ae4613 100%);
+        opacity: .72;
+    }
+    @media #{$mobile} {
+        height: 60px;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        &:before {
+            z-index: 100;
+            opacity: 1;
+        }
+    }
+    .email-page-logo {
+        padding-top: 12px;
+        position: relative;
+        z-index: 80;
+        @media #{$mobile} {
+            position: absolute;
+            top: 2px;
+            left: 50%;
+            margin-left: -65px;
+            img {
+                width: 130px;
+            }
+        }
+    }
+    .email-page-search-btn {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+    .email-page-search-holder {
+        float: right;
+        margin-left: 10px;
+        z-index: 70;
+        position: relative;
+        ::-webkit-input-placeholder {
+          color: $white;
+        }
+        ::-moz-placeholder {
+          color: $white;
+        }
+        :-moz-placeholder {
+          color: $white;
+        }
+        :-ms-input-placeholder {
+          color: $white;
+        }
+        input[type="text"] {
+            padding: 0 10px;
+            height: 36px;
+            line-height: 20px;
+            width: 220px;
+            font-size: 14px;
+            color: $white;
+            border: none;
+            outline: none;
+            background: #626262;
+            @include border-radius (8px);
+        }
+        .email-page-search-inner {
+            padding-top: 14px;
+        }
+        .email-page-search-result {
+            border-top: 1px solid #6b6b6b;
+            li {
+                border-bottom: 1px solid #6b6b6b;
+                a {
+                    display: block;
+                    font-size: 25px;
+                    padding: 15px;
+                    line-height: 1;
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+        }
+        @media #{$mobile} {
+            width: 100%;
+            height: calc(100% - 60px);
+            position: fixed;
+            left: 0;
+            top: 60px;
+            margin: 0;
+            display: none;
+
+            .email-page-search-inner {
+                padding-top: 0;
+                background: #3f3f3f;
+                height: 100%;
+                &-content {
+                    padding-top: 14px;
+                    height: 100%;
+                    overflow-y: scroll;
+                    padding-bottom: 30px;
+                }
+                h5 {
+                    text-align: center;
+                    font-size: 22px;
+                    font-weight: $bold;
+                    color: $white;
+                    margin-bottom: 15px;
+                }
+                .email-page-input-holder {
+                    padding: 0 15px 20px;
+                    input[type="text"] {
+                        width: 100%;
+                        height: 55px;
+                        font-size: 27px;
+                        background: $gray;
+                        line-height: 40px;
+                        padding: 0 25px;
+                    }
+                }
+            }
+        }
+    }
+    .nav {
+        float: right;
+        .nav-divider {
+            background: none;
+        }
+        > li {
+            float: left;
+            > a {
+                padding: 25px 20px 24px;
+                font-size: 15px;
+                color: $white;
+                &:hover, &:focus {
+                    opacity: .9;
+                    background: none;
+                }
+            }
+            .dropdown-menu {
+                padding: 10px 0;
+                background: $gray;
+                border: none;
+                margin-top: 1px;
+                @include border-radius (0);
+                > li {
+                    padding: 3px 20px;
+                    > a {
+                        padding: 0;
+                        font-size: 13px;
+                        color: $white;
+                        &:hover, &:focus {
+                            opacity: .9;
+                            background: none;
+                        }
+                    }
+                }
+                &.dropdown-large {
+                    width: 650px;
+                    left: auto;
+                    right: -415px;
+                    padding-left: 10px;
+                    > li {
+                        width: 33%;
+                        float: left;
+                        > a {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+            @media #{$mobile} {
+                float: none;
+                border-bottom: 1px solid #6b6b6b;
+                > a {
+                    font-size: 25px;
+                    padding: 15px;
+                }
+                .dropdown-menu {
+                    padding: 0;
+                    float: none;
+                    position: static;
+                    width: 100%;
+                    > li {
+                        border-top: 1px solid #6b6b6b;
+                        padding: 0;
+                        a {
+                            font-size: 25px;
+                            padding: 15px;
+                            line-height: 1;
+                            white-space: normal;
+                        }
+                    }
+                    &.dropdown-large {
+                        width: 100%;
+                        padding-left: 0;
+                        > li {
+                            width: 100%;
+                            float: none;
+                        }
+                    }
+                }
+            }
+        }
+        .open {
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 100%;
+                width: 100%;
+                height: 1px;
+                background: $gray;
+            }
+            > a {
+                background: none;
+                &:hover, &:focus {
+                    background: none;
+                }
+            }
+            @media #{$mobile} {
+                > a {
+                    text-align: center;
+                    font-size: 22px;
+                    font-weight: $bold;
+                }
+            }
+        }
+        @media #{$mobile} {
+            float: none;
+            overflow-y: scroll;
+            height: 100%;
+        }
+    }
+}
+
+.navbar-header {
+    @media #{$mobile} {
+        height: 60px;
+    }
+}
+.container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+
+    z-index: 50;
+    position: relative;
+}
+.container-fluid > .navbar-header {
+    z-index: 80;
+}
+.container-fluid > .navbar-collapse {
+    @media #{$mobile} {
+        background: #3f3f3f;
+        padding-left: 0;
+        padding-right: 0;
+        position: fixed;
+        z-index: 10000;
+        width: 100%;
+        height: calc(100% - 60px);
+        border-top: none;
+    }
+}
+
+
+.navbar-toggle {
+    float: left;
+    border: none;
+    margin: 0;
+    margin-top: 6px;
+    margin-left: 10px;
+    background: #3f3f3f;
+    @include border-radius (0);
+    .icon-bar {
+        width: 35px;
+        height: 4px;
+        background: $white;
+        @include border-radius (30px);
+        &+ .icon-bar {
+            margin-top: 8px;
+        }
+    }
+    &.collapsed {
+        background: $gray;
+        .icon-bar {
+            background: $white;
+        }
+    }
+}

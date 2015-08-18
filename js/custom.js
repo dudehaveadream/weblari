@@ -35,3 +35,16 @@ if($(window).width() < 767)
 	    return false;
 	});
 }
+
+
+// email-page func
+$('#toggleSearch').click(function(){
+	$('.email-page-search-holder').slideToggle();
+});
+
+$('.email-page-subheader-collapse #toggleSubheader').click(function(e){
+	$(this).parent().hide();
+	$('.email-page-subheader-collapse .email-page-subheader-info-inner').show();
+	$('.email-page-subheader-collapse').addClass('collapsed');
+	e.preventDefault();
+});
