@@ -74,6 +74,10 @@ body {
   }
 }
 
+.body-scroll-disable {
+  overflow-y: hidden;
+}
+
 a.blue {
   color: #305581;
   border-bottom: 1px solid #305581;
@@ -495,7 +499,7 @@ header .search-holder .search-result li a {
     height: calc(100% - 60px);
     position: fixed;
     left: 0;
-    top: 60px;
+    top: 61px;
     margin: 0;
     display: none;
   }

@@ -201,6 +201,10 @@ body {
   }
 }
 
+.body-scroll-disable {
+  overflow-y: hidden;
+}
+
 a.blue {
   color: #305581;
   border-bottom: 1px solid #305581;
@@ -341,25 +345,25 @@ p {
   right: 20px;
   top: 15px;
 }
-.email-page-header .email-page-search-holder {
+.email-page-header .search-holder {
   float: right;
   margin-left: 10px;
   z-index: 70;
   position: relative;
 }
-.email-page-header .email-page-search-holder ::-webkit-input-placeholder {
+.email-page-header .search-holder ::-webkit-input-placeholder {
   color: #ffffff;
 }
-.email-page-header .email-page-search-holder ::-moz-placeholder {
+.email-page-header .search-holder ::-moz-placeholder {
   color: #ffffff;
 }
-.email-page-header .email-page-search-holder :-moz-placeholder {
+.email-page-header .search-holder :-moz-placeholder {
   color: #ffffff;
 }
-.email-page-header .email-page-search-holder :-ms-input-placeholder {
+.email-page-header .search-holder :-ms-input-placeholder {
   color: #ffffff;
 }
-.email-page-header .email-page-search-holder input[type="text"] {
+.email-page-header .search-holder input[type="text"] {
   padding: 0 10px;
   height: 36px;
   line-height: 20px;
@@ -374,16 +378,16 @@ p {
   -ms-border-radius: 8px;
   border-radius: 8px;
 }
-.email-page-header .email-page-search-holder .email-page-search-inner {
+.email-page-header .search-holder .email-page-search-inner {
   padding-top: 14px;
 }
-.email-page-header .email-page-search-holder .email-page-search-result {
+.email-page-header .search-holder .email-page-search-result {
   border-top: 1px solid #6b6b6b;
 }
-.email-page-header .email-page-search-holder .email-page-search-result li {
+.email-page-header .search-holder .email-page-search-result li {
   border-bottom: 1px solid #6b6b6b;
 }
-.email-page-header .email-page-search-holder .email-page-search-result li a {
+.email-page-header .search-holder .email-page-search-result li a {
   display: block;
   font-size: 25px;
   padding: 15px;
@@ -392,37 +396,37 @@ p {
   text-decoration: none;
 }
 @media only screen and (max-width: 767px) {
-  .email-page-header .email-page-search-holder {
+  .email-page-header .search-holder {
     width: 100%;
     height: calc(100% - 60px);
     position: fixed;
     left: 0;
-    top: 60px;
+    top: 61px;
     margin: 0;
     display: none;
   }
-  .email-page-header .email-page-search-holder .email-page-search-inner {
+  .email-page-header .search-holder .email-page-search-inner {
     padding-top: 0;
     background: #3f3f3f;
     height: 100%;
   }
-  .email-page-header .email-page-search-holder .email-page-search-inner-content {
+  .email-page-header .search-holder .email-page-search-inner-content {
     padding-top: 14px;
     height: 100%;
     overflow-y: scroll;
     padding-bottom: 30px;
   }
-  .email-page-header .email-page-search-holder .email-page-search-inner h5 {
+  .email-page-header .search-holder .email-page-search-inner h5 {
     text-align: center;
     font-size: 22px;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 15px;
   }
-  .email-page-header .email-page-search-holder .email-page-search-inner .email-page-input-holder {
+  .email-page-header .search-holder .email-page-search-inner .email-page-input-holder {
     padding: 0 15px 20px;
   }
-  .email-page-header .email-page-search-holder .email-page-search-inner .email-page-input-holder input[type="text"] {
+  .email-page-header .search-holder .email-page-search-inner .email-page-input-holder input[type="text"] {
     width: 100%;
     height: 55px;
     font-size: 27px;
