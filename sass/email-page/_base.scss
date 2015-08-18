@@ -1,11 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 
-body {
-    font-family: 'Open Sans', sans-serif;
+body#email-page {
+    font-family: 'Open Sans', sans-serif !important;
     font-size: 15px;
     font-weight: $regular;
     color: $gray;
-    background: #3f3f3f;
+    background: #3f3f3f !important;
     padding-bottom: 35px;
     @media #{$mobile} {
         padding-top: 60px;
